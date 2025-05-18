@@ -1,0 +1,48 @@
+
+{
+  "info": {
+    "name": "Mapeamento Patio API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Motos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/moto",
+          "host": ["{{base_url}}"],
+          "path": ["api", "moto"]
+        }
+      }
+    },
+    {
+      "name": "POST - Nova Moto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{
+  "modelo": "CG 160",
+  "placa": "XYZ9A88",
+  "status": "Disponível",
+  "localizacao": "Setor A3",
+  "filialId": 1
+}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/moto",
+          "host": ["{{base_url}}"],
+          "path": ["api", "moto"]
+        }
+      }
+    }
+  ]
+}
